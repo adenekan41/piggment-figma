@@ -1,0 +1,176 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@300;400&display=swap');
+@import './app.css';
+@import './normalize.css';
+
+:root {
+  --theme-primary: #1b21dd;
+  --white: #fafafa;
+  --black: #0d1442;
+  --accent: #152ba2;
+  --alert-success: #438875;
+  --alert-danger: #da3451;
+  --sidebar-width: 260px;
+  --bg-white: #fff8f0;
+  --gray: #8f9bb3;
+  --font-primary: 'Muli';
+  --font-lg: 2.84em;
+  --font-x-lg: 3.82em;
+  --font-x-md: 1.32em;
+  --font-md: 1.11em;
+  --font-sm: 0.8175em;
+  --font-x-sm: 0.97em;
+}
+
+::selection {
+  background: var(--theme-primary);
+  color: var(--white);
+  /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: var(--theme-primary);
+  color: var(--white);
+  /* Gecko Browsers */
+}
+
+::-webkit-input-placeholder {
+  color: var(--gray);
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  color: var(--gray);
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: var(--gray);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: var(--gray);
+  opacity: 1;
+}
+
+body {
+  font-family: var(--font-primary), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 3rem !important;
+
+  /* background: #fff8f0; */
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  image-rendering: crisp-edges;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Poppins';
+  letter-spacing: -1.2px;
+  word-spacing: 3px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-piggment {
+  background: linear-gradient(200deg, var(--theme-primary), var(--accent));
+  color: #fff !important;
+  border-radius: 4px;
+  transition: all 0.5s ease !important;
+  border: none;
+}
+
+.btn-outline-piggment {
+  border: 1px solid var(--theme-primary) !important;
+  box-shadow: none;
+  transition: all 0.5s ease !important;
+  color: var(--accent) !important;
+}
+
+.btn-piggment:hover {
+  box-shadow: 6px 8px 13px #0000006b !important;
+  color: #fff;
+}
+
+@media screen and (max-width: 935px) {
+  :root {
+    --sidebar-width: 0px !important;
+  }
+}
+
+@media (min-width: 767px) {
+  .w-md-auto {
+    width: auto !important;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn;
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-backdrop {
+  opacity: 1 !important;
+  background-color: #fff8f0 !important;
+}
+
+.w-md-auto {
+  width: 100%;
+}
+
+.none-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: var(--accent) !important;
+}
+
+.bg-main {
+  background: #fff8f0;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
