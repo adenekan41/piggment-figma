@@ -1,11 +1,11 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
-import React, { useEffect, useContext, useCallback } from "react";
-import styled from "styled-components";
-import GradientContext from "../context/index";
-import GradientLayout from "../components/card/card-container";
-import { debounce } from "../utils/index";
+import React, { useEffect, useContext, useCallback } from 'react';
+import styled from 'styled-components';
+import GradientContext from '../context/index';
+import GradientLayout from '../components/card/card-container';
+import { debounce } from '../utils/index';
 
 const Home = () => {
 	const { state, loadGradients } = useContext(GradientContext);
@@ -19,28 +19,29 @@ const Home = () => {
 	return (
 		<>
 			<Header>
-				<article className='container'>
+				<article className="container">
 					<h1>Explore fresh gradients.</h1>
 					<p>
 						Generate, explore, easy CSS copy crossbrowser code all in one place.
 					</p>
 				</article>
 			</Header>
-			<Section className='container'>
+			<Section className="container">
 				<GradientLayout
-					header='Discover'
+					header="Discover"
 					state={state}
 					noRefresh
-					mode='see-more'
+					mode="see-more"
 				/>
-				<button className='btn btn-piggment' onClick={() => loadGradients(5)}>
+				<button className="btn btn-piggment" onClick={() => loadGradients(5)}>
 					Load More
 				</button>
 			</Section>
 		</>
 	);
 };
-const Header = styled.header`
+
+export const Header = styled.header`
 	background: #fff8f0;
 	min-height: 11em;
 	align-items: center;
@@ -62,6 +63,7 @@ const Header = styled.header`
 		font-weight: 400;
 	}
 `;
+
 const Section = styled.section`
 	margin-top: 2rem;
 
@@ -91,4 +93,5 @@ const Section = styled.section`
 		padding: 6px 40px;
 	}
 `;
+
 export default Home;
