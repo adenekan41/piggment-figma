@@ -8,7 +8,6 @@ import styled, { css } from "styled-components";
 import PureComponent from "../pure-component-wrapper";
 import GradientContext from "../../context";
 import rgbToSrgb from "@fantasy-color/rgb-to-srgb";
-// import Card from '.';
 
 /* --------------------------- Image Dependencies --------------------------- */
 import PureReload from "../../assets/icons/icon-refresh.svg";

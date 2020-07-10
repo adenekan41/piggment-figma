@@ -1,5 +1,5 @@
 /* --------------------------- External Dependency -------------------------- */
-import React from "react";
+import React from 'react';
 
 type State = {
 	state: Array<object>;
@@ -18,7 +18,7 @@ const GradientContext = React.createContext<State>({
 	state: [],
 	palette: [],
 	snarkbars: [],
-	route: "",
+	route: '',
 	setRoute: () => {},
 	setSnarkbar: () => {},
 	removeSnarkbar: () => {},
